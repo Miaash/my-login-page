@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import LoginPage from "./Components/LoginPage";
+import MyPage from "./Components/MyPage";
 
-function App() {
+const App = () => {
+  const [login, setLogin] = useState(false);
+  const [logout, setLogout] = useState(false);
+
+
+  const onLoginHandler = () => {
+    setLogin(true);
+  
+  }
+
+  const onLogoutHandler = () => {
+    setLogout(true);
+  }
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      {!login&& <LoginPage onLogin={onLoginHandler}/>}
+      {login && <MyPage login={login} onLogout={onLogoutHandler}/>}
+    </React.Fragment>
   );
 }
 
