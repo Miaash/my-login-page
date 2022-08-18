@@ -1,0 +1,32 @@
+.mypage {
+    position: relative;
+    width: 90%;
+    max-width: 32rem;
+    height: 14rem;
+    margin: 2rem auto;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+}
+
+.mypage h2 {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.mypage button {
+    position: absolute;
+    top: 160px;
+    right: 225px;
+    width: 6rem;
+    height: 2rem;
+    border: none;
+    background-color: white;
+    font-size: 1.4rem;
+    margin: 0.5rem;
+    color: rgb(136, 136, 136);
+}
+
+.mypage button:hover {
+    color: rgb(42, 42, 42);
+    font-weight: 600;
+}
